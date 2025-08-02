@@ -28,8 +28,8 @@ class TestMemorySaver:
     def test_initialization(self):
         """Test memory saver initialization"""
         saver = MemorySaver()
-        assert saver._checkpoints == {}
-        assert saver._metadata == {}
+        assert not saver._checkpoints  # pylint: disable=protected-access
+        assert not saver._metadata  # pylint: disable=protected-access
 
 
 class TestMemorySaverOperations:
@@ -43,8 +43,8 @@ class TestMemorySaverOperations:
         """Test basic memory saver operations"""
         # Test that the saver can be instantiated
         assert self.saver is not None
-        assert hasattr(self.saver, "_checkpoints")
-        assert hasattr(self.saver, "_metadata")
+        assert hasattr(self.saver, "_checkpoints")  # pylint: disable=protected-access
+        assert hasattr(self.saver, "_metadata")  # pylint: disable=protected-access
 
     def test_context_manager(self):
         """Test the memory saver as a context manager"""

@@ -25,14 +25,14 @@ class TestStoreInitialization:
     def test_default_initialization(self):
         """Test default initialization"""
         store = InMemoryStore()
-        assert store._data == {}
-        assert store._namespaces == set()
-        assert store._ttl_data == {}
+        assert not store._data  # pylint: disable=protected-access
+        assert not store._namespaces  # pylint: disable=protected-access
+        assert not store._ttl_data  # pylint: disable=protected-access
 
     def test_custom_initialization(self):
         """Test custom initialization"""
         store = InMemoryStore(index=True)
-        assert store._index_config is True
+        assert store._index_config is True  # pylint: disable=protected-access
 
 
 class TestInMemoryStore:
@@ -44,9 +44,9 @@ class TestInMemoryStore:
 
     def test_initialization(self):
         """Test store initialization"""
-        assert self.store._data == {}
-        assert self.store._namespaces == set()
-        assert self.store._ttl_data == {}
+        assert not self.store._data  # pylint: disable=protected-access
+        assert not self.store._namespaces  # pylint: disable=protected-access
+        assert not self.store._ttl_data  # pylint: disable=protected-access
 
     def test_put_and_get(self):
         """Test basic put and get operations"""

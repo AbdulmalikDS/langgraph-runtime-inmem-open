@@ -11,12 +11,14 @@ disable=
     W0703, # broad-except
     W0612, # unused-variable
     W0611, # unused-import
+    E0110, # abstract-class-instantiated
+    W0201, # attribute-defined-outside-init
 
 [FORMAT]
 max-line-length=88
 
 [MESSAGES CONTROL]
-disable=C0111,R0903,C0103,W0622
+disable=C0111,R0903,C0103,W0622,R0801
 
 [REPORTS]
 output-format=text

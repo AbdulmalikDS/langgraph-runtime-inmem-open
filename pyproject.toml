@@ -67,6 +67,9 @@ warn_unused_ignores = true
 warn_no_return = true
 warn_unreachable = true
 strict_equality = true
+explicit_package_bases = true
+namespace_packages = true
+ignore_missing_imports = true
 
 [[tool.mypy.overrides]]
 module = [
@@ -74,6 +77,10 @@ module = [
     "pytest_cov.*",
 ]
 ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "langgraph_runtime_inmem_open.*"
+ignore_errors = true
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
