@@ -8,6 +8,8 @@ version = "0.1.0"
 description = "Open-source alternative to langgraph-runtime-inmem"
 authors = [{name = "Abdulmalik Alquwayfili", email = "af.alquwayfili@gmail.com"}]
 readme = "README.md"
+
+
 requires-python = ">=3.8"
 dependencies = [
     "langgraph>=0.0.40",
