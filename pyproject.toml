@@ -79,7 +79,7 @@ module = [
 ignore_missing_imports = true
 
 [[tool.mypy.overrides]]
-module = "langgraph_runtime_inmem_open.*"
+module = "langgraph_runtime_inmem_open"
 ignore_errors = true
 
 [tool.pytest.ini_options]
