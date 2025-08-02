@@ -1,0 +1,32 @@
+[MASTER]
+disable=
+    C0114, # missing-module-docstring
+    C0115, # missing-class-docstring
+    C0116, # missing-function-docstring
+    R0903, # too-few-public-methods
+    R0913, # too-many-arguments
+    R0914, # too-many-locals
+    R0915, # too-many-statements
+    W0621, # redefined-outer-name
+    W0703, # broad-except
+    W0612, # unused-variable
+    W0611, # unused-import
+
+[FORMAT]
+max-line-length=88
+
+[MESSAGES CONTROL]
+disable=C0111,R0903,C0103,W0622
+
+[REPORTS]
+output-format=text
+score=yes
+
+[BASIC]
+good-names=i,j,k,ex,Run,_,id,db
+
+[SIMILARITIES]
+min-similarity-lines=4
+ignore-comments=yes
+ignore-docstrings=yes
+ignore-imports=no 
